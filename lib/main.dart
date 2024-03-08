@@ -8,7 +8,7 @@ void main() {
     theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 17, 187, 213),
+          seedColor: Color.fromARGB(255, 0, 0, 0),
         )),
   ));
 }
