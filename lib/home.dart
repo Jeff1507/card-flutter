@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -58,40 +59,36 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Card(
+          elevation: 5,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+          clipBehavior: Clip.antiAliasWithSaveLayer,
           child: Container(
             decoration: const BoxDecoration(
-                gradient: LinearGradient(colors: <Color>[
-              Color(0xFFFA8BFF),
-              Color(0xFF2BD2FF),
-              Color(0xFF2BFF88),
-            ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-            child: Padding(
-              padding: EdgeInsets.all(15),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Text('cachorro'),
-                          Column(
-                            children: [Text('chupetao'), Text('auuuuuu')],
-                          )
-                        ],
-                      ),
-                      Image.asset(
-                        'assets/img/frieren.jpg',
-                        width: 100,
-                        height: 100,
-                      )
-                    ],
-                  ),
-                  Row(
-                    children: <Widget>[Text('sed'), Text('data')],
-                  )
-                ],
-              ),
+              gradient: LinearGradient(colors: [Colors.blue, Colors.green]),
+            ),
+            child: const Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                ListTile(
+                  title: Text('The Enchanted Nightingale'),
+                  subtitle:
+                      Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text('datasssssssssssssssssssssssssssssssss'),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.all(15.0),
+                      child: Text('segssssssssssssssssssssssssssssss'),
+                    )
+                  ],
+                ),
+              ],
             ),
           ),
         ),
