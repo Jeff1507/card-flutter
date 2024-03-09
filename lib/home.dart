@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -67,24 +68,71 @@ class _MyHomePageState extends State<MyHomePage> {
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [Colors.blue, Colors.green]),
             ),
-            child: const Column(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                ListTile(
-                  title: Text('The Enchanted Nightingale'),
-                  subtitle:
-                      Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-                ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    const Column(
+                      //crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.all(15.0),
+                          child: Text('Cachorro Chupetão'),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 15.0),
+                          child: Column(
+                            children: <Widget>[
+                              Text('Cachorro'),
+                              Text('Chupetão')
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(100),
+                        child: Image.asset(
+                          'assets/img/frierenzinha.png',
+                          width: 150,
+                          height: 150,
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.all(15.0),
-                      child: Text('datasssssssssssssssssssssssssssssssss'),
+                      child: Row(
+                        children: [
+                          Icon(Icons.phone_callback),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text('+55 41 99999-9999')
+                        ],
+                      ),
                     ),
                     Padding(
                       padding: EdgeInsets.all(15.0),
-                      child: Text('segssssssssssssssssssssssssssssss'),
+                      child: Row(
+                        children: [
+                          Icon(Icons.email),
+                          SizedBox(
+                            width: 5,
+                          ),
+                          Text('exemplo@gmail.com')
+                        ],
+                      ),
                     )
                   ],
                 ),
