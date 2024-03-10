@@ -60,6 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Card(
+          margin: const EdgeInsets.all(10),
           elevation: 5,
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
@@ -114,11 +115,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(15.0),
                       child: Row(
                         children: [
-                          Icon(Icons.phone_callback),
+                          Icon(
+                            Icons.phone_callback,
+                            color: Colors.white,
+                          ),
                           SizedBox(
                             width: 5,
                           ),
-                          Text('+55 41 99999-9999')
+                          Text(
+                            '+55 41 99999-9999',
+                            style: TextStyle(color: Colors.white),
+                          )
                         ],
                       ),
                     ),
@@ -126,11 +133,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       padding: EdgeInsets.all(15.0),
                       child: Row(
                         children: [
-                          Icon(Icons.email),
+                          Icon(
+                            Icons.email,
+                            color: Colors.white,
+                          ),
                           SizedBox(
                             width: 5,
                           ),
-                          Text('exemplo@gmail.com')
+                          Text(
+                            'exemplo@gmail.com',
+                            style: TextStyle(color: Colors.white),
+                          )
                         ],
                       ),
                     )
