@@ -74,6 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -131,6 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
                     Padding(
                       padding: EdgeInsets.all(15.0),
