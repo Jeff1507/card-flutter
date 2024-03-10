@@ -153,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Padding(
                       padding: EdgeInsets.all(15.0),
                       child: Row(
-                        children: [
+                        children: <Widget>[
                           Icon(
                             Icons.email,
                             color: Colors.white,
