@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -67,7 +65,8 @@ class _MyHomePageState extends State<MyHomePage> {
           clipBehavior: Clip.antiAliasWithSaveLayer,
           child: Container(
             decoration: const BoxDecoration(
-              gradient: LinearGradient(colors: [Colors.blue, Colors.green]),
+              gradient: LinearGradient(
+                  colors: [Colors.purple, Colors.blue, Colors.green]),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,22 +75,19 @@ class _MyHomePageState extends State<MyHomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    const Column(
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
                       //crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
+                      children: [
                         Padding(
                           padding: EdgeInsets.all(15.0),
-                          child: Text('Cachorro Chupetão'),
+                          child: Text('data'),
                         ),
-                        Padding(
-                          padding: EdgeInsets.only(top: 15.0),
-                          child: Column(
-                            children: <Widget>[
-                              Text('Cachorro'),
-                              Text('Chupetão')
-                            ],
-                          ),
-                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [Text('data'), Text('data')],
+                        )
                       ],
                     ),
                     Padding(
